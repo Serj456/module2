@@ -13,7 +13,7 @@ for i in numbers:
     if i <= 1:
         pass
     else:
-        for j in range(2, int(i ** 0.5) + 1):
+        for j in range(2, int(i // 0.5) + 1):
             if i % j != 0:
                 if i not in primes and i not in not_primes:
                     primes.append(i)
