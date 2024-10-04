@@ -1,0 +1,24 @@
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+primes = []
+not_primes = []
+for i in numbers:
+    if i == 2:
+        primes.append(i)
+    for j in range(2, i):
+        if i % j == 0:
+            if i not in not_primes and i not in primes:
+                not_primes.append(i)
+                break
+for i in numbers:
+    if i <= 1:
+        pass
+    else:
+        for j in range(2, int(i // 0.5) + 1):
+            if i % j != 0:
+                if i not in primes and i not in not_primes:
+                    primes.append(i)
+                    break
+                else:
+                    pass
+print("Простые - 2,3,5,7,11,13 - ", primes)
+print("Непростые - 4,6,8,9,10,12,14,15 - ", not_primes)
